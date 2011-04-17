@@ -1,0 +1,290 @@
+/* Generics */
+
+body {
+    background-image: url("/i/bg.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-color: #000034;
+    color: #ffffff;
+    line-height: 1.5;
+    font-family: 'Lucida Grande', Calibri, 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+form {
+    margin: 0;
+}
+
+textarea {
+    width: 95%;
+}
+
+a:link { color: #000099; }
+a:visited { color: #000066; }
+a:active, a:hover { color: #336699; }
+
+.amp {
+    font-family: Baskerville, serif;
+    font-style: italic;
+}
+
+/* Layout */
+
+#sorry {
+    text-align: center;
+    background-color: #ffcccc;
+    border: solid 2px #990000;
+    color: #000000;
+    z-index: 10;
+    top: 0; left: 0; right: 0;
+    padding: 3px;
+    position: absolute;
+}
+
+#stage, #audience, #help, #help_post, #meta, #logo, #post, #invite, #controller {
+    background-color: #4184c8;
+    background-color: #7878b2;
+}
+#stage, #audience, #help, #help_post, #meta, #logo, #post, #invite, #controller {
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    position: absolute;
+    background-color: rgba(239, 239, 255, 0.5);
+    color: #000000;
+}
+
+#stage {    left: 1.5%;              top: 2%;  width: 65%; height: 42%; }
+#audience { left: 1.5%;              top: 47%; width: 65%; height: 46%; } 
+#logo {                 right: 1.5%; top: 2%;  width: 30%; height: 25.5%; } 
+#help {                 right: 1.5%; top: 28.5%; width: 30%; height: 43.5%; height: 42.5%; } 
+#help_post {            right: 1.5%; top: 28.5%; width: 30%; height: 43.5%; height: 57.5%; } 
+#post {                 right: 1.5%; top: 73%; width: 30%; height: 20%; background-color: #aabbdd; }
+#controller {           right: 1.5%; top: 87%; width: 30%; height: 6%; background-color: #aabbdd; }
+
+#meta {
+    background-color: #bfbfd7;
+}
+#meta {
+    left: 1.5%; bottom: 2%; right: 1.5%;
+    max-height: 4%;
+    text-align: center;
+    font-size: 83%;
+    background-color: rgba(239, 239, 255, 0.8);
+    color: #000000;
+}
+
+#invite {
+    left: 1.5%; top: 2%;
+    width: 65%; height: 91%;
+}
+
+/* Content of layout */
+
+.wrap {
+    position: relative;
+    top: 1%;
+    height: 98%;
+    overflow: auto;
+    margin: 0 1%;
+}
+
+#stage .wrap {
+    top: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0 20%;
+}
+
+#curtain-left, #curtain-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+#curtain-right {
+    right: 15px;
+}
+#curtain-left {
+    left: 0;
+}
+
+#audience .results div {
+    margin-right: 1%;
+}
+
+#logo .wrap {
+    top: 4%;
+    height: 92%;
+    margin: 0 2%;
+    overflow: hidden;
+}
+#logo img {
+    margin-left: 50%;
+    margin-top: -113px;
+    position: relative;
+    top: 50%;
+    left: -170px; /*
+    340x227 */
+}
+
+.help_wrap {
+    position: relative;
+    top: 2%;
+    height: 96%;
+    margin: 0 2%;
+    overflow: auto;
+}
+
+#post .wrap, #controller .wrap {
+    margin: 0 3%;
+    top: 5%;
+    height: 90%;
+}
+#post p, #controller p {
+    margin: 0;
+}
+#post #twitter-signin {
+    margin-top: 1em;
+}
+
+/* The actual message displaying */
+
+.results img {
+    float: left;
+    width: 32px;
+    margin: 0 4px 0 0;
+}
+
+.results img.twitpic {
+    float: right;
+    width: 150px;
+    margin: 0 0 0 4px;
+}
+
+.results div {
+    clear: both;
+    overflow: auto;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.a0, .a1 {
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    border-radius: 0.25em;
+}
+.a0 { background-color: #d6d6e7; }
+.a0 { background-color: rgba(255, 255, 255, 0.7); }
+.a1 { background-color: #bbbbd2; }
+.a1 { background-color: rgba(255, 255, 255, 0.5); }
+
+.results span {
+    font-size: 83%;
+}
+
+/* Things in the help */
+
+#accordion div {
+    font-size: 83%;
+}
+
+#cast_list ul {
+    margin: 0 0 0 1em;
+    padding: 0;
+}
+
+#post_form {
+    display: none;
+}
+
+/* Prelaunch stuff */
+
+#audience .results .pre {
+    margin-right: 0%;
+}
+
+.pre {
+    font-size: 175%;
+    text-align: center;
+    margin: 0.25em 0 0;
+}
+.pre p {
+    margin: 0;
+}
+
+#post_feedback {
+    font-size: 83%;
+    color: #009900;
+}
+#post_feedback.error {
+    color: #990000;
+}
+
+#do_stuff {
+    text-align: center;
+    margin-top: 0.5em;
+}
+#do_stuff p {
+    margin: 0;
+}
+
+#no_space {
+    margin-bottom: 0;
+}
+#no_space img {
+    margin-right: 5px;
+}
+
+#ical_link {
+    padding-left: 20px;
+    background: url('/i/calendar.gif') no-repeat;
+}
+#post_twitter_link {
+    padding-left: 20px;
+    background: url('/i/comment.gif') no-repeat;
+}
+#post_twitter_link:hover {
+    background: url('/i/comment_new.gif') no-repeat;
+}
+
+#loading {
+    background-color: #ffcccc;
+    color: #000000;
+    font-size: 150%;
+    border: solid 2px #990000;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    padding: 5px;
+    position: absolute;
+    top: 2%;
+    left: 1.5%;
+    z-index: 10;
+}
+
+#controls {
+    text-align: center;
+}
+#controls a {
+    background-repeat: no-repeat;
+}
+#controls span {
+    display: none;
+}
+#control_play, #control_play_all {
+    padding-left: 20px;
+    background-image: url("/i/control_play.png");
+}
+#control_play:hover, #control_play_all:hover {
+    background-image: url("/i/control_play_blue.png");
+}
+/*
+#control_pause { background-image: url("/i/control_pause.png"); }
+#control_pause:hover { background-image: url("/i/control_pause_blue.png"); }
+#control_reset { background-image: url("/i/control_start.png"); }
+#control_reset:hover { background-image: url("/i/control_start_blue.png"); }
+*/
+
