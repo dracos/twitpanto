@@ -1,0 +1,51 @@
+#!usr/bin/python
+
+import simplejson, re
+
+s = open('single.json').read()
+s = "[%s]" % s
+j = simplejson.loads(s)
+
+cast = [ 'dracos', 'twitpanto', 'bounder', 'probablydrunk', 'graphiquillan', 'tom_watson', 'jonhickman', 'philipjohn', 'cataspanglish', 'benjiw', 'swearynews', 'mazzawoo', 'daneed4', 'karmadillo', 'chrisunitt', 'cybrum', 'mandyrose1', 'getgood', 'gavinwray', 'tomattwood' ]
+narrator = 'twitpanto'
+audience_alt = 1
+stage_alt = 1
+
+def make_links(str):
+    a_start = '<a target="_blank" title="Opens in new window" href="'
+    str = re.sub('http://twitpic\.com/([\d\w]+)(?i)', r'http://twitpic.com/\1 <br><img class="twitpic" src="http://twitpic.com/show/thumb/\1" alt="">', str)
+    str = re.sub('http://yfrog\.(com|us)/([\d\w]+)(?i)', r'http://yfrog.\1/\2 <br><img class="twitpic" src="http://yfrog.com/\2.th.jpg" alt="">', str)
+    str = re.sub('([^"])(https?://[\S]+)', r'\1' + a_start + r'\2">\2</a>', str)
+    str = re.sub('(^|[^a-z0-9_])@([a-z0-9_]+)(?i)', r'\1' + a_start + r'http://twitter.com/\2">@\2</a>', str)
+    str = re.sub('#([a-z0-9_]+)(?i)', a_start + r'http://search.twitter.com/search?q=%23\1">#\1</a>', str)
+    return str
+
+def pretty_date(d):
+    d = d.replace('Mon, 20 Dec ', '')
+    d = d.replace('Mon Dec 20 ', '')
+    d = d.replace(' +0000', '')
+    d = d.replace(' 2010', '')
+    return d
+
+row = { '#audience': '', '#stage': '' }
+for message in j:
+    from_user = message['user']['screen_name']
+    if from_user.lower() in cast:
+        loc = '#stage'
+        stage_alt ^= 1
+        alt = stage_alt
+    else:
+        loc = '#audience'
+        audience_alt ^= 1
+        alt = audience_alt
+    text = make_links(message['text'])
+    if from_user == narrator: text = '<strong>' + text + '</strong>'
+    row[loc] += '<div class="a%s user_%s"><img src="%s" width="32"> <a target="_blank" href="http://twitter.com/%s" class="user">%s</a> %s <span><a class="date" target="_blank" href="http://twitter.com/%s/status/%s"><small>%s</small></a></span></div>\n' % (alt, from_user, message['user']['profile_image_url'], from_user, from_user, text, from_user, message['id_str'], pretty_date(message['created_at']))
+
+f = open('stage.html', 'w')
+f.write(row['#stage'].encode('utf-8'))
+f.close()
+f = open('audience.html', 'w')
+f.write(row['#audience'].encode('utf-8'))
+f.close()
+

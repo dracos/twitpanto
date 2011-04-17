@@ -1,0 +1,4 @@
+<Files stream.php>
+  Order allow,deny
+  Deny From all
+</Files>
