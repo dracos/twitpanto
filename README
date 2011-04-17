@@ -1,0 +1,45 @@
+TwitPanto
+=========
+
+If you want to reuse this code for another panto, you'll probably need to do
+some or all of the following:
+
+e stream/stream.php will need updating with a Twitter username and password,
+  and the correct hashtag. This script needs to start running before the panto,
+  and never stop. It will output everything to disc, like magic. The front end
+  pulls from the static file it's outputting every few seconds - you could end
+  up using quite a bit of bandwidth.
+
+* To allow Twitter posting from the site:
+  1. Set up a Twitter app with "Browser" application type, and a callback URL
+     of wherever your site is /callback.php
+  2. Copy config.php-example to config.php and fill in the appropriate values.
+
+* index.html is a symlink to whichever of index_pre/live/post is currently
+  needed - pre in the days before the panto, live at some point on the day of
+  the panto, and post afterwards when you've created the static transcript. The
+  text in all the index files will need updating for cast list etc.
+
+* The JS in js/twitpanto-live.js will need the cast list, date and hashtag
+  updating at the least, as will similar data in twitpanto-pre.js.
+
+* The twitpanto.ics iCal file will need updating.
+
+Plus of course changing the CSS, images, and so on, if you want.
+
+Post panto:
+
+* index_post.html will need most of the text removing and replacing with the
+  output of stream/make_html (updated with correct data) from the JSON
+  generated during the panto (tidied up a bit if you want - e.g. for Twitpanto
+  2010 I removed the top 20 or so lines from all.json to start at an
+  appropriate place).
+
+* js/twitpanto-post.js will need updating to have the correct values for the
+  front end to work.
+
+Sorry this isn't much documentation, and it was all cobbled together, but it's
+better than nothing and worked well on the day.
+
+ATB,
+Matthew
