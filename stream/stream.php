@@ -17,7 +17,7 @@ write_latest($out_latest, 'all');
 write_latest($out_latest);
 
 $fp_all = fopen('all.json', 'a'); # Where to store all messages
-$instream = fopen("http://$username:$password@stream.twitter.com/1/statuses/filter.json", 'r', false, $context);
+$instream = fopen("https://$username:$password@stream.twitter.com/1/statuses/filter.json", 'r', false, $context);
 while (!feof($instream)) {
     if (!($line = stream_get_line($instream, 20000, "\r"))) continue;
     if ($line == "\n") continue;
