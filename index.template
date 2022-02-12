@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Moon live Twitter commentary, 30th December 2012</title>
+    <link type="text/css" rel="stylesheet" href="/css.css">
+    <link type="text/css" rel="stylesheet" href="/jquery-ui-1.7.2.custom.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="/js/twitpanto-post.js"></script>
+</head>
+<body>
+
+<div id="loading">There&rsquo;s a lot of text to load, please be patient&hellip;</div>
+
+<div id="stage">
+    <div class="wrap"><div class="results">
+        <!-- pre-launch text -->
+        <div class="a0 pre">
+            <p><em>Moon live Twitter commentary</em></p>
+            <p>With Duncan Jones, Gavin Rothery, Clint Mansell, and more</p>
+        </div>
+        <div class="a1 pre">
+            <p><strong>Sunday 30<sup>th</sup> December<br>2012, 10pm GMT</strong></p>
+        </div>
+        <!-- pre-launch text -->
+
+        STAGE DATA HERE
+    </div></div>
+    <img id="curtain-right" src="/i/right_sm.png" alt="">
+    <img id="curtain-left" src="/i/left_sm.png" alt="">
+</div>
+
+<div id="audience">
+    <div class="wrap"><div class="results">
+        AUDIENCE DATA HERE
+    </div></div>
+</div>
+
+<div id="logo"><div class="wrap"><img src="i/moon-logo.jpeg" alt="Twitpanto"></div></div>
+
+<div id="help_post"><div class="help_wrap">
+
+<div id="accordion">
+
+<h2><a href="#">What is this?</a></h2>
+<div>
+<a href="http://theatricalia.com/"><img style="margin-left: 0.5em; float: right; padding: 3px; background-color: #ffffff; border: solid 1px #cccccc;" src="/i/theatricalia.png" width=125 height=125 alt="Theatricalia"></a>
+<p>
+A live Twitter commentary of the film Moon took place on 30th December at 10pm, as the
+film was being shown on BBC2.
+
+<p>I had this mechanism created for the two Twitter
+pantos I was involved with in 2009 and 2010, so thought I'd use it to document the event.
+<strong>To replay, use the controls below.</strong>
+
+<p><a href="http://theatricalia.com"><em>Theatricalia</em></a> is an IMDb for
+theatre, a database of past and future theatre productions, which you can help
+with by contributing productions &ndash; if you have a spare minute, please do :)</p>
+
+<p>See replays of
+<a href="http://beanstalk.twitpanto.co.uk/">Twitpanto 2010</a>,
+&ldquo;Jack and the Beanstalk&rdquo; and
+<a href="http://twitpanto.birminghamhippodrome.com/">Twitpanto 2009</a>,
+“Robin Hood, men in twights (ouch)”.
+</div>
+
+<h2><a href="#">Cast list</a></h2>
+<div id="cast_list">
+<ul>
+
+<li>Director: <a target="_blank" href="http://twitter.com/ManMadeMoon">Duncan Jones</a>
+<li>Concept Artist and VFX Supervisor: <a target="_blank" href="http://twitter.com/gavrov">Gavin Rothery</a>
+<li>Composer: <a target="_blank" href="http://twitter.com/iamclintmansell">Clint Mansell</a>
+<li>Art Director: <a target="_blank" href="http://twitter.com/hide2k10">Hideki Arichi</a>
+<li>Producer: <a target="_blank" href="http://twitter.com/libertystu">Stuart Fenegan</a>
+<li>Visual effects/playback editor: <a target="_blank" href="http://twitter.com/bazzybazbazbaz">Barrett Heathcote</a>
+<li>Actor, Thompson: <a target="_blank" href="http://twitter.com/wongrel">Benedict Wong</a>
+<li>Actor, Overmeyers: <a target="_blank" href="http://twitter.com/porksmith">Matt Berry</a>
+
+
+</ul>
+
+</div>
+
+</div>
+
+</div></div>
+
+<div id="controller"><div class="wrap">
+<p id="controls">
+Constant:
+<a href="#" id="control_play"><span>Play </span>from 10pm</a>
+<a href="#" id="control_play_all"><span>Play </span>from 8pm</a>
+<br>Real-time:
+<a href="#" id="control_play_real"><span>Play </span>from 10pm</a>
+<a href="#" id="control_pause"><img src="/i/control_pause.png" border=0 alt="Pause"></a>
+<a href="#" id="control_reset"><img src="/i/control_start.png" border=0 alt="Reset"></a>
+</p>
+</div></div>
+
+<div id="meta">
+Set design <span class="amp">&amp;</span> construction by <a href="http://twitter.com/dracos">Matthew Somerville</a>
+of <a href="http://theatricalia.com/">Theatricalia</a>
+</div>
+
+<script type="text/javascript">
+document.getElementById('loading').style.display = 'none';
+</script>
+</body>
+</html>
+

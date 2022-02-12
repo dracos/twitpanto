@@ -1,0 +1,11 @@
+#!/usr/bin/php
+<?php
+
+$f = file_get_contents('index.template');
+$s = file_get_contents('stage.html');
+$a = file_get_contents('audience.html');
+
+$f = str_replace('STAGE DATA HERE', $s, $f);
+$f = str_replace('AUDIENCE DATA HERE', $a, $f);
+
+file_put_contents('index_post.html', $f);

@@ -1,10 +1,10 @@
 /* Generics */
 
 body {
-    background-image: url("/i/bg.png");
+    background-image: url("i/moon.jpeg");
     background-repeat: no-repeat;
-    background-position: 50% 0%;
-    background-color: #000034;
+    background-position: 0% 0%;
+    background-color: #000000;
     color: #ffffff;
     line-height: 1.5;
     font-family: 'Lucida Grande', Calibri, 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
@@ -59,11 +59,11 @@ a:active, a:hover { color: #336699; }
 
 #stage {    left: 1.5%;              top: 2%;  width: 65%; height: 42%; }
 #audience { left: 1.5%;              top: 47%; width: 65%; height: 46%; } 
-#logo {                 right: 1.5%; top: 2%;  width: 30%; height: 25.5%; } 
-#help {                 right: 1.5%; top: 28.5%; width: 30%; height: 43.5%; height: 42.5%; } 
-#help_post {            right: 1.5%; top: 28.5%; width: 30%; height: 43.5%; height: 57.5%; } 
-#post {                 right: 1.5%; top: 73%; width: 30%; height: 20%; background-color: #aabbdd; }
-#controller {           right: 1.5%; top: 87%; width: 30%; height: 6%; background-color: #aabbdd; }
+#logo {                 right: 1.5%; top: 2%;  width: 30%; height: 20%; } 
+/* #help {                 right: 1.5%; top: 23%; width: 30%; height: 43.5%; height: 42.5%; }  */
+#help_post {            right: 1.5%; top: 23%; width: 30%; height: 43.5%; height: 57.5%; } 
+/* #post {                 right: 1.5%; top: 73%; width: 30%; height: 20%; background-color: #aabbdd; } */
+#controller {           right: 1.5%; top: 82%; width: 30%; height: 10%; background-color: #cccccc; }
 
 #meta {
     background-color: #bfbfd7;
@@ -123,7 +123,7 @@ a:active, a:hover { color: #336699; }
 }
 #logo img {
     margin-left: 50%;
-    margin-top: -113px;
+    margin-top: -100px;
     position: relative;
     top: 50%;
     left: -170px; /*
@@ -274,11 +274,11 @@ a:active, a:hover { color: #336699; }
 #controls span {
     display: none;
 }
-#control_play, #control_play_all {
+#control_play, #control_play_all, #control_play_real {
     padding-left: 20px;
     background-image: url("/i/control_play.png");
 }
-#control_play:hover, #control_play_all:hover {
+#control_play:hover, #control_play_all:hover, #control_play_real:hover {
     background-image: url("/i/control_play_blue.png");
 }
 /*
