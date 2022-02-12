@@ -16,14 +16,14 @@ move_on_cast: function() {
     $('#stage .wrap').scrollTo(next, { duration: 100, axis: 'y' });
     next = $('#stage .results div:eq(' + (placeC+1) + ')');
     var time = next.find('small').html();
-    next_cast_time = new Date('Mon, 20 Dec 2010 ' + time + ' GMT');
+    next_cast_time = new Date('Fri, 18 Dec 2009 ' + time + ' GMT');
 },
 
 move_on: function() {
     placeA += 1;
     var next = $('#audience .results div:eq(' + placeA + ')');
     var time = next.find('small').html();
-    var current_audience_time = new Date('Mon, 20 Dec 2010 ' + time + ' GMT');
+    var current_audience_time = new Date('Fri, 18 Dec 2009 ' + time + ' GMT');
     if (current_audience_time >= next_cast_time) {
         twitpanto.move_on_cast();
     }
@@ -33,19 +33,19 @@ move_on: function() {
 
 play: function() {
     if (running) {
-        if (placeA < 93) {
-            placeA = 93;
-            placeC = 92;
+        if (placeA < 197) {
+            placeA = 197;
+            placeC = 123;
         }
         if (!timer) twitpanto.move_on();
         return false;
     }
     var next = $('#stage .results div:eq(2)');
     var time = next.find('small').html();
-    next_cast_time = new Date('Mon, 20 Dec 2010 ' + time + ' GMT');
+    next_cast_time = new Date('Fri, 18 Dec 2009 ' + time + ' GMT');
     running = 1;
-    placeA = 93;
-    placeC = 92;
+    placeA = 197;
+    placeC = 123;
     twitpanto.move_on();
     return false;
 },
@@ -57,9 +57,9 @@ play_all: function() {
     }
     var next = $('#stage .results div:eq(2)');
     var time = next.find('small').html();
-    next_cast_time = new Date('Mon, 20 Dec 2010 ' + time + ' GMT');
+    next_cast_time = new Date('Fri, 18 Dec 2009 ' + time + ' GMT');
     running = 1;
-    placeA = -1;
+    placeA = 0;
     placeC = 1;
     twitpanto.move_on();
     return false;
